@@ -18,7 +18,7 @@ SHA256SUMS.txt and release-metadata.json accompany every release. The app verifi
 
 - Manual and automatic tracking; personal statistics with date filters and interactive leaderboards linking to journeys.
 - Interactive route history, journey search, dark/light/terrain maps and optional start/end markers.
-- Google Timeline import, individually estimated roads worldwide, optional Mauritius batch estimation, and manual route tracing.
+- Google Timeline import, individually estimated roads worldwide, optional Mauritius batch estimation, and manual tracing with ordered, road-snapped waypoints.
 - Smooth drive replay with speed, incident badges, custom playback speeds and a final route summary.
 - Editable highway and other-road review speed thresholds, with optional speed alerts.
 - Weekly/monthly comparisons, frequent route groups and counts, saved places and driving trends.
@@ -32,6 +32,8 @@ SHA256SUMS.txt and release-metadata.json accompany every release. The app verifi
 Complete location/activity permissions in Settings, allow background location and enable detection. On Samsung, use Unrestricted battery and remove the app from sleeping/deep-sleeping lists. Open the app again after an Android Force stop. Detection depends on Android and the activity classifier, and can miss journeys. It cannot distinguish a driver from a passenger. Background camera recording may require opening Live Drive.
 
 ## Imported routes
+
+Implausible imports over 100 minutes and at most 4 km of supplied distance are omitted from normal views and statistics; Settings > Journey data > Omitted imports lets you restore legitimate entries. Original data is retained.
 
 Historical Timeline imports have only the supplied locations, dates and distance information. Estimated roads and manual traces are illustrative, not proof of the roads taken; measured speed, incidents and video cannot be recovered from missing data. Individual road estimation works worldwide. Optional bulk estimation is restricted to Mauritius and requires your own PC router.
 
