@@ -21,7 +21,10 @@ SHA256SUMS.txt and release-metadata.json accompany every release. The app verifi
 - Google Timeline import, individually estimated roads worldwide, optional Mauritius batch estimation, and manual route tracing.
 - Smooth drive replay with speed, incident badges, custom playback speeds and a final route summary.
 - Editable highway and other-road review speed thresholds, with optional speed alerts.
-- Portable backups of journeys, saved routes, review events, videos and settings; verified restore into an empty installation.
+- Weekly/monthly comparisons, frequent route groups and counts, saved places and driving trends.
+- Search and filter history, mark passenger journeys, trim drives reversibly and combine consecutive trips with undo.
+- Backup previews and optional password encryption, including saved places, groups and reversible edits; verified restore into an empty installation.
+- A video storage manager that keeps journeys when deleting recordings.
 - Optional compressed rear-camera dashcam, optional microphone audio, synchronized playback and on-demand recap video export.
 
 ## Automatic tracking
