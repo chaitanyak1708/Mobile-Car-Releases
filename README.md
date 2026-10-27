@@ -26,7 +26,7 @@ SHA256SUMS.txt and release-metadata.json accompany every release. The app verifi
 - Backup previews and optional password encryption, including saved places, groups and reversible edits; verified restore into an empty installation.
 - A video storage manager that keeps journeys when deleting recordings.
 - Optional compressed rear-camera dashcam, optional microphone audio, synchronized playback and on-demand recap video export.
-- Optional Community rankings for weekly/monthly distance, journey count and active days, using a chosen nickname and home country/area.
+- Swipeable Personal and Community dashboard tabs with shared date controls. Optional Community rankings compare distance, journey count, active days and highest recorded speed using a chosen nickname and home country/area.
 
 ## Automatic tracking
 
@@ -44,6 +44,6 @@ No Docker setup or debugging connection is needed on users' phones. Mauritius ro
 
 Journeys and dashcam clips are stored locally. Map providers receive tile requests for the viewed area. Requested road estimation sends selected coordinates to the chosen routing service: router.ametheusgroup.com for hosted Mauritius requests, FOSSGIS/OSRM for worldwide requests. Hosted Mauritius requests pass through Cloudflare to the home server. Road-class checks use Overpass. GitHub receives ordinary release checks and downloads, without journey records. Maps and routing need internet; recording and stored history work offline. Map and third-party credits remain visible in the app.
 
-Community sharing is optional. Read the privacy notice and explicitly agree before activation. After agreement, Supabase stores an anonymous authentication identity, nickname, manually selected country/area, and daily distance/journey totals used for public weekly/monthly rankings. Community does not upload routes, coordinates, speeds, incidents, videos or saved places. Only eligible recorded driver journeys qualify; imports and passenger journeys are excluded. Stop sharing removes the public profile/scores, with an explicit pending state if offline. The anonymous identity is installation-specific: stop sharing before uninstalling or clearing app data. Scores and areas are self-reported; they are not independently verified.
+Community sharing is optional. Read the privacy notice and explicitly agree before activation. After agreement, Supabase stores an anonymous authentication identity, nickname, manually selected country/area, and recent daily distance/journey totals and highest recorded speeds used for public date-filtered rankings. Community does not upload routes, coordinates, speed traces, incidents, videos or saved places. Highest recorded speed is included only after agreement to the updated notice. Only eligible recorded driver journeys qualify; imports and passenger journeys are excluded. Stop sharing removes the public profile/scores, with an explicit pending state if offline. The anonymous identity is installation-specific: stop sharing before uninstalling or clearing app data. Scores and areas are self-reported; they are not independently verified.
 
 Please report bugs using Issues without posting private Timeline exports, location histories or camera footage. See each release's notes for known limitations.
