@@ -26,6 +26,7 @@ SHA256SUMS.txt and release-metadata.json accompany every release. The app verifi
 - Backup previews and optional password encryption, including saved places, groups and reversible edits; verified restore into an empty installation.
 - A video storage manager that keeps journeys when deleting recordings.
 - Optional compressed rear-camera dashcam, optional microphone audio, synchronized playback and on-demand recap video export.
+- Optional Community rankings for weekly/monthly distance, journey count and active days, using a chosen nickname and home country/area.
 
 ## Automatic tracking
 
@@ -37,10 +38,12 @@ Implausible imports over 100 minutes and at most 4 km of supplied distance are o
 
 Historical Timeline imports have only the supplied locations, dates and distance information. Estimated roads and manual traces are illustrative, not proof of the roads taken; measured speed, incidents and video cannot be recovered from missing data. Individual road estimation works worldwide. From v1.2.0, optional Mauritius bulk estimation uses router.ametheusgroup.com over HTTPS without a PC or debugging connection. The home-hosted service depends on power and internet availability.
 
-For the optional PC router mode, install Docker Desktop with its Linux engine and Android platform-tools. Connect the phone with USB or paired wireless debugging, then run the attached **setup-mauritius-router.ps1** using PowerShell. The script downloads Mauritius OpenStreetMap data, builds a local OSRM graph, binds the router to localhost, and forwards the connected phone through ADB. Keep the PC, router and ADB connection running while using PC router mode. This setup is unnecessary for the default hosted service or recording drives.
+No Docker setup or debugging connection is needed on users' phones. Mauritius routing is hosted separately; worldwide individual estimation remains available.
 
 ## Privacy and maps
 
-Journeys and dashcam clips are stored locally. Map providers receive tile requests for the viewed area. Requested road estimation sends selected coordinates to the chosen routing service: router.ametheusgroup.com for hosted Mauritius requests, FOSSGIS/OSRM for worldwide requests, or your PC in PC mode. Hosted Mauritius requests pass through Cloudflare to the home server. Road-class checks use Overpass. GitHub receives ordinary release checks and downloads, without journey records. Maps and routing need internet; recording and stored history work offline. Map and third-party credits remain visible in the app. Community sharing is inactive pending backend configuration.
+Journeys and dashcam clips are stored locally. Map providers receive tile requests for the viewed area. Requested road estimation sends selected coordinates to the chosen routing service: router.ametheusgroup.com for hosted Mauritius requests, FOSSGIS/OSRM for worldwide requests. Hosted Mauritius requests pass through Cloudflare to the home server. Road-class checks use Overpass. GitHub receives ordinary release checks and downloads, without journey records. Maps and routing need internet; recording and stored history work offline. Map and third-party credits remain visible in the app.
+
+Community sharing is optional. Read the privacy notice and explicitly agree before activation. After agreement, Supabase stores an anonymous authentication identity, nickname, manually selected country/area, and daily distance/journey totals used for public weekly/monthly rankings. Community does not upload routes, coordinates, speeds, incidents, videos or saved places. Only eligible recorded driver journeys qualify; imports and passenger journeys are excluded. Stop sharing removes the public profile/scores, with an explicit pending state if offline. The anonymous identity is installation-specific: stop sharing before uninstalling or clearing app data. Scores and areas are self-reported; they are not independently verified.
 
 Please report bugs using Issues without posting private Timeline exports, location histories or camera footage. See each release's notes for known limitations.
