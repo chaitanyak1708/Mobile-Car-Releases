@@ -23,10 +23,11 @@ SHA256SUMS.txt and release-metadata.json accompany every release. The app verifi
 - Editable highway and other-road review speed thresholds, with optional speed alerts.
 - Weekly/monthly comparisons, frequent route groups and counts, saved places and driving trends.
 - Search and filter history, mark passenger journeys, trim drives reversibly and combine consecutive trips with undo.
-- Backup previews and optional password encryption, including saved places, groups and reversible edits; verified restore into an empty installation.
+- Separate Export progress / Restore progress actions, optional recordings and password encryption enabled by default. Use compatible cloud providers in Android's file picker or save/upload/download the archive yourself. Restore previews and verifies data into an empty library, including saved places, groups and reversible edits.
 - A video storage manager that keeps journeys when deleting recordings.
 - Optional compressed rear-camera dashcam, optional microphone audio, synchronized playback and on-demand recap video export.
-- Swipeable Personal and Community dashboard tabs with shared date controls. Optional Community rankings compare distance, journey count, active days and highest recorded speed using a chosen nickname and home country/area.
+- Compact date selectors across Dashboard, Journeys and Routes; contextual tracking health and interrupted-recording recovery.
+- Swipeable Personal and Community dashboard tabs with shared date controls. Joined members can view rankings, including a pinned own rank and sync status. Optional Community rankings compare distance, journey count, active days and highest recorded speed using a chosen nickname and home country/area.
 
 ## Automatic tracking
 
@@ -44,6 +45,10 @@ No Docker setup or debugging connection is needed on users' phones. Mauritius ro
 
 Journeys and dashcam clips are stored locally. Map providers receive tile requests for the viewed area. Requested road estimation sends selected coordinates to the chosen routing service: router.ametheusgroup.com for hosted Mauritius requests, FOSSGIS/OSRM for worldwide requests. Hosted Mauritius requests pass through Cloudflare to the home server. Road-class checks use Overpass. GitHub receives ordinary release checks and downloads, without journey records. Maps and routing need internet; recording and stored history work offline. Map and third-party credits remain visible in the app.
 
-Community sharing is optional. Read the privacy notice and explicitly agree before activation. After agreement, Supabase stores an anonymous authentication identity, nickname, manually selected country/area, and recent daily distance/journey totals and highest recorded speeds used for public date-filtered rankings. Community does not upload routes, coordinates, speed traces, incidents, videos or saved places. Highest recorded speed is included only after agreement to the updated notice. Only eligible recorded driver journeys qualify; imports and passenger journeys are excluded. Stop sharing removes the public profile/scores, with an explicit pending state if offline. The anonymous identity is installation-specific: stop sharing before uninstalling or clearing app data. Scores and areas are self-reported; they are not independently verified.
+Community comparisons require joining. Community sharing is optional. Read the privacy notice and explicitly agree before activation. After agreement, Supabase stores an anonymous authentication identity, nickname, manually selected country/area, and recent daily distance/journey totals and highest recorded speeds used for public date-filtered rankings. Community does not upload routes, coordinates, speed traces, incidents, videos or saved places. Highest recorded speed is included only after agreement to the updated notice. Only eligible recorded driver journeys qualify; imports and passenger journeys are excluded. Stop sharing removes the public profile/scores, with an explicit pending state if offline. The anonymous identity is installation-specific: stop sharing before uninstalling or clearing app data. Scores and areas are self-reported; they are not independently verified.
+
+App usage reporting is a separate optional choice, disabled until you explicitly agree. It uses a random installation identity, app version and server UTC activity days to count active participating installations, including users outside Community. Routes, locations, speeds, recordings, nickname and journey records are excluded. You can turn it off in Settings > Privacy; usage history removal retries when connected. Counters are private to the maintainer. Reports reflect foreground use rather than background tracking. Reporting uses a recent 90-day window; older records are cleared as new reports arrive. Usage consent and credentials are not included in progress exports.
+
+Share app is a standalone button at the top of Settings and shares the latest public release link.
 
 Please report bugs using Issues without posting private Timeline exports, location histories or camera footage. See each release's notes for known limitations.
