@@ -54,7 +54,7 @@ Save a private Community recovery code outside your phone before uninstalling. A
 
 App usage reporting is a separate optional choice, disabled until you explicitly agree. It uses a random installation identity, app version and server UTC activity days to count active participating installations, including users outside Community. Routes, locations, speeds, recordings, nickname and journey records are excluded. You can turn it off in Settings > Privacy; usage history removal retries when connected. Counters are private to the maintainer. Reports reflect foreground use rather than background tracking. Reporting uses a recent 90-day window; older records are cleared as new reports arrive. Usage consent and credentials are not included in progress exports.
 
-After an update, a short What's new popup appears once on the first app opening outside an active drive. The current GitHub updater downloads a complete signed APK.
+After an update, a short What's new popup appears once on the first app opening outside an active drive. From v1.5.2, the GitHub updater can download a smaller patch for a matching installed public APK when it saves at least 20%. It reconstructs and verifies the complete signed APK before asking Android to install it, and falls back to a full download if needed. Installing v1.5.2 itself requires one full download; smaller downloads apply to subsequent updates. Direct downloads always provide the full APK.
 
 Share app is a standalone button at the top of Settings and shares the latest public release link.
 
